@@ -10,8 +10,8 @@ import { useAuthProvider } from "../context/auth-context";
 const Footer = () => {
     
     return(
-    <footer className="bg-[#000000] h-[440px]">
-       <Wrapper className="text-[#FAFAFA] w-full grid grid-cols-4 pt-20 px-[135px] pb-[124px]">
+    <footer className="bg-[#000000] lg:h-[440px]">
+       <Wrapper className="text-[#FAFAFA] w-full grid grid-cols-1 gap-10 lg:grid-cols-4 pt-20 px-[135px] pb-[124px]">
        <div className="flex flex-col gap-4">
          <div className="flex flex-col gap-6">
             <h2 className="font-bold text-2xl">Exclusive</h2>
@@ -105,13 +105,13 @@ const Header = () => {
           >
             Exclusive
           </Link>
-          <ul className="flex items-center gap-12">
+          <ul className="flex items-center gap-3 lg:gap-12">
             {
               links.map(link =>(
                 <li key={crypto.randomUUID()}>
                   <Link 
                     to={link.url}
-                    className={"text-base font-[400] text-[#000000]"+ ` ${pathName === link.url && 'underline' }` + ` ${pathName === '/user' && link.url === '/' && 'underline'}` + ` ${isLoggedIn && link.url === '/sign-up' && 'hidden'} `}
+                    className={"text-sm lg:text-base font-[400] text-[#000000]"+ ` ${pathName === link.url && 'underline' }` + ` ${pathName === '/user' && link.url === '/' && 'underline'}` + ` ${isLoggedIn && link.url === '/sign-up' && 'hidden'} `}
                   >
                     {link.name}
                   </Link>
@@ -121,7 +121,7 @@ const Header = () => {
           </ul>
 
           <div className="flex items-center gap-6">
-            <div className="relative w-[243px] h-[38px]">
+            <div className="relative w-[243px] hidden lg:block h-[38px]">
               <Input 
                 placeholder="What are you looking for?"
                 className="h-full w-full"

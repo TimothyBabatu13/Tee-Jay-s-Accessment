@@ -4,7 +4,7 @@ import Wrapper from "./wrapper"
 const Ads = () => {
   return (
     <section 
-        className="h-12 bg-[#000000] text-[#FAFAFA]  text-sm font-[400]"
+        className="h-12 bg-[#000000] text-[#FAFAFA]  text-sm font-[400] hidden lg:block"
     >
         <Wrapper className="flex items-center h-full justify-between">
 
