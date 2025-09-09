@@ -57,13 +57,13 @@ const Hero = () => {
     ]
     return(
         <div>
-            <Wrapper className="flex items-center gap-[45px]">
-               <div className="border-r border-black h-full">
-                 <div className="w-[217px] flex flex-col gap-4 mt-10">
+            <Wrapper className="lg:flex items-center gap-[45px]">
+               <div className="lg:border-r border-black h-full">
+                 <div className="lg:w-[217px] hidden lg:flex lg:flex-col gap-4 mt-10">
                     {
                         leftData.map(leftDatum =>(
                             <div 
-                                className="flex justify-between items-center text-base font-[400] text-[#000000] cursor-pointer"
+                                className="flex justify-between items-center text-sm lg:text-base font-[400] text-[#000000] cursor-pointer"
                             >
                                 {leftDatum.text}
                                 {
@@ -95,7 +95,7 @@ const Hero = () => {
                     </div>
                     <img 
                         src="iphone_hero.png" 
-                        className="h-full" 
+                        className="h-full w-full hidden lg:block" 
                         alt="" 
                     />
                     <div
@@ -121,11 +121,11 @@ const FlashSales = () => {
             <div className="items-center">
                 <div className="flex justify-between ">
                     <div className="flex items-baseline-last gap-[87px]">
-                        <h2 className="text-4xl font-semibold text-[#000000]">Flash Sales</h2>
+                        <h2 className="lg:text-4xl font-semibold text-[#000000]">Flash Sales</h2>
                     <div className="flex items-baseline-last">
                         <div className="flex flex-col ">
                             <span className="font-medium text-[12px] text-[#000000]">Days</span>
-                            <h5 className="text-[32px] font-bold text-[#000000]">03</h5>
+                            <h5 className="lg:text-[32px] font-bold text-[#000000]">03</h5>
                         </div>
                         <div className="h-4 flex flex-col gap-2 mx-[17px]">
                             <span className="size-1 rounded-full bg-[#E07575]"/>
@@ -133,7 +133,7 @@ const FlashSales = () => {
                         </div>
                         <div className="flex flex-col ">
                             <span className="font-medium text-[12px] text-[#000000]">Hours</span>
-                            <h5 className="text-[32px] font-bold text-[#000000]">23</h5>
+                            <h5 className="lg:text-[32px] font-bold text-[#000000]">23</h5>
                         </div>
                         <div className="h-4 flex flex-col gap-2 mx-[17px]">
                             <span className="size-1 rounded-full bg-[#E07575]"/>
@@ -141,7 +141,7 @@ const FlashSales = () => {
                         </div>
                         <div className="flex flex-col ">
                             <span className="font-medium text-[12px] text-[#000000]">Minutes</span>
-                            <h5 className="text-[32px] font-bold text-[#000000]">19</h5>
+                            <h5 className="lg:text-[32px] font-bold text-[#000000]">19</h5>
                         </div>
                         <div className="h-4 flex flex-col gap-2 mx-[17px]">
                             <span className="size-1 rounded-full bg-[#E07575]"/>
@@ -149,12 +149,12 @@ const FlashSales = () => {
                         </div>
                         <div className="flex flex-col ">
                             <span className="font-medium text-[12px] text-[#000000]">Seconds</span>
-                            <h5 className="text-[32px] font-bold text-[#000000]">56</h5>
+                            <h5 className="lg:text-[32px] font-bold text-[#000000]">56</h5>
                         </div>
                     </div>
                     </div>
                     
-                    <div className="flex items-center gap-2">
+                    <div className="lg:flex items-center gap-2 hidden">
                         <Button className="size-[46px] rounded-full bg-[#F5F5F5] hover:bg-transparent cursor-pointer">
                             <ArrowLeft className="text-[#000000] size-6"/>
                         </Button>
@@ -263,7 +263,7 @@ const Categories = () => {
             <div className="items-center">
                 <div className="flex justify-between ">
                     <div className="flex items-baseline-last gap-[87px]">
-                        <h2 className="text-4xl font-semibold text-[#000000]">Browse By Category</h2>
+                        <h2 className="lg:text-4xl font-semibold text-[#000000]">Browse By Category</h2>
                     </div>
 
                     <div className="flex items-center gap-2">
@@ -363,10 +363,10 @@ const BestSelling = () => {
             <div className="items-center">
                 <div className="flex justify-between ">
                     <div className="flex items-baseline-last gap-[87px]">
-                        <h2 className="text-4xl font-semibold text-[#000000]">Best Selling Products</h2>
+                        <h2 className="lg:text-4xl font-semibold text-[#000000]">Best Selling Products</h2>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="lg:flex items-center gap-2 hidden">
                         <Button
                             className="w-[159px] h-[56px] bg-[#DB4444] text-[#FAFAFA] text-base font-medium rounded-[4px] mx-auto hover:bg-[#DB4444] cursor-pointer"
                         >
@@ -470,26 +470,26 @@ const Banner = () => {
             <div className="flex items-center h-full mt-[37px] mr-[44px] mb-[43px] ml-[56px]">
                 <div className="flex-1">
                 <h4 className="text-base font-semibold text-[#00FF66] mb-8">Categories</h4>
-                <h3 className="text-5xl font-semibold text-[#FAFAFA] w-[443px] leading-[60px] mb-8">Enhance Your Music Experience</h3>
-                <div className="flex items-center gap-6">
+                <h3 className="text-1xl lg:text-5xl font-semibold text-[#FAFAFA] w-[443px] leading-[60px] mb-8">Enhance Your Music Experience</h3>
+                <div className="flex items-center gap-2 lg:gap-6">
                     <div 
                         className="h-[62px] w-[62px] rounded-full bg-[#FFFFFF] flex flex-col items-center justify-center">
-                        <span className="text-base font-semibold text-[#000000]">23</span>
+                        <span className="lg:text-base font-semibold text-[#000000]">23</span>
                         <span className="text-[11px] font-[400] text-[#000000]">Hours</span>
                     </div>
                     <div 
                         className="h-[62px] w-[62px] rounded-full bg-[#FFFFFF] flex flex-col items-center justify-center">
-                        <span className="text-base font-semibold text-[#000000]">05</span>
+                        <span className="lg:text-base font-semibold text-[#000000]">05</span>
                         <span className="text-[11px] font-[400] text-[#000000]">Days</span>
                     </div>
                     <div 
                         className="h-[62px] w-[62px] rounded-full bg-[#FFFFFF] flex flex-col items-center justify-center">
-                        <span className="text-base font-semibold text-[#000000]">59</span>
+                        <span className="lg:text-base font-semibold text-[#000000]">59</span>
                         <span className="text-[11px] font-[400] text-[#000000]">Minutes</span>
                     </div>
                     <div 
                         className="h-[62px] w-[62px] rounded-full bg-[#FFFFFF] flex flex-col items-center justify-center">
-                        <span className="text-base font-semibold text-[#000000]">35</span>
+                        <span className="lg:text-base font-semibold text-[#000000]">35</span>
                         <span className="text-[11px] font-[400] text-[#000000]">Seconds</span>
                     </div>
                 </div>
@@ -505,7 +505,7 @@ const Banner = () => {
                 alt=""
                 width={600}
                 height={420} 
-                className="!h-[420px] flex-1"
+                className="!h-[420px] hidden lg:block flex-1"
                 draggable={false}
             />
             </div>
@@ -522,10 +522,10 @@ const OurProduct = () => {
             <div className="items-center">
                 <div className="flex justify-between ">
                     <div className="flex items-baseline-last gap-[87px]">
-                        <h2 className="text-4xl font-semibold text-[#000000]">Explore Our Products</h2>
+                        <h2 className="lg:text-4xl font-semibold text-[#000000]">Explore Our Products</h2>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="lg:flex hidden items-center gap-2">
                         <Button className="size-[46px] rounded-full bg-[#F5F5F5] hover:bg-transparent cursor-pointer">
                             <ArrowLeft className="text-[#000000] size-6"/>
                         </Button>
@@ -631,7 +631,7 @@ const OurProductContent = () => {
         }
     ]
     return(
-    <Wrapper className="mb-[60px] grid grid-cols-4 gap-y-[60px] gap-x-[30px]">
+    <Wrapper className="mb-[60px] grid grid-cols-1 place-items-center lg:grid-cols-4 gap-y-[60px] gap-x-[30px]">
            {
             OurProductContentData.map(({discountPercent, discountPrice, image, mumberOfRating, name,outOfSales, price,ratings, isNew}) =>(
                 <FlashSalesCard 
@@ -655,7 +655,7 @@ const OurProductContent = () => {
 
 const NewArrival = () => {
     return(
-        <Wrapper className=" mb-[60px]">
+        <Wrapper className=" mb-[60px] hidden lg:block">
             <SectionTitle text="Featured"/>
             <div className="items-center">
                 <div className="flex justify-between ">
@@ -670,7 +670,7 @@ const NewArrival = () => {
 
 const NewArrivalContent = () => {
     return(
-        <Wrapper className="h-[600px] flex items-center gap-[30px] mb-[140px]">
+        <Wrapper className="h-[600px] hidden lg:flex items-center gap-[30px] mb-[140px]">
             <div
                 style={{backgroundImage: "url('/ps5_background_image.png')", backgroundSize: '100%', backgroundColor: 'black', backgroundRepeat: 'no-repeat', backgroundPosition: 'center/center'}}
                 className="h-full w-full flex-1 bg-[#000000] flex items-end rounded-[4px]"
@@ -769,7 +769,7 @@ export const CustomerService = () => {
 
     return(
         <div
-            className="w-[943px] h-[161px] mx-auto grid grid-cols-3 gap-[88px] mb-[140px]"
+            className="lg:w-[943px] place-items-center lg:h-[161px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-[88px] mb-[140px]"
         >
          {
             CustomerServiceData.map(({ heading, text, url }) =>(
@@ -786,7 +786,7 @@ export const CustomerService = () => {
 }
 const LandingPage = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
         <Hero />
         <FlashSales />
         <FlashSalesContent />

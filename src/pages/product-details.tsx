@@ -103,12 +103,12 @@ const ProductDetails = () => {
             <span className="font-bold">Havic HV G-92 Gamepad</span>
         </div>
         <div
-            className="h-[600px] grid grid-cols-5 gap-[70px] mb-[140px]"
+            className="lg:h-[600px] flex flex-col-reverse lg:grid lg:grid-cols-5 gap-[70px] mb-[140px]"
         >
             <div
-                className="col-span-3 flex gap-[30px]"
+                className="lg:col-span-3 md:flex gap-[30px]"
             >
-                <div className="w-[170px] flex flex-col gap-4">
+                <div className="lg:w-[170px] w-full md:w-1/2 grid grid-cols-2 md:flex md:flex-col gap-4">
                     <div className="border border-[#F5F5F5] shadow rounded-[4px]">
                         <img src="/pes1.png" className="w-[170px] h-[138px]" alt="pes 1" />
                     </div>
@@ -122,8 +122,8 @@ const ProductDetails = () => {
                         <img src="/pes4.png" className="w-[170px] h-[138px]" alt="pes 1" />
                     </div>
                 </div>
-                <div className="w-[500px] border border-[#F5F5F5] shadow flex justify-center items-center rounded-[4px]">
-                    <img src="/pes5.png" alt="pes" />
+                <div className="lg:w-[500px] border border-[#F5F5F5] shadow flex justify-center items-center rounded-[4px]">
+                    <img src="/pes5.png" className="w-full" alt="pes" />
                 </div>
             </div>
             <div
@@ -145,7 +145,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <h4 className="text-2xl font-normal my-6">$192.00</h4>
-                <p className="text-sm font-normal w-[373px]">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
+                <p className="text-sm font-normal md:w-[373px]">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
                 <hr className="my-6"/>
                 <div className="flex items-center gap-6">
                     <h5>Colours:</h5>
@@ -174,7 +174,7 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-col md:flex-row items-center gap-4">
                     <div className="w-[159px] h-11 flex items-center">
                         <div role="button" className="border h-full w-[40px] border-[#00000080] flex items-center justify-center cursor-pointer">
                             <Minus />
@@ -190,7 +190,7 @@ const ProductDetails = () => {
                         <Button className="bg-[#DB4444] hover:bg-[#DB4444] font-medium text-base text-[#FAFAFA] cursor-pointer w-[165px] h-11 rounded-[4px]">
                             Buy Now
                         </Button>
-                        <Button className="size-10 bg-white hover:bg-white border border-[#00000080] cursor-pointer">
+                        <Button className="size-10 hidden md:block bg-white hover:bg-white border border-[#00000080] cursor-pointer">
                             <Heart size={20} className="text-black"/>
                         </Button>
                     </div>
